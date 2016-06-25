@@ -1,5 +1,5 @@
 module.exports = {
-  entry: "./app/components/Main.js",
+  entry: "./app/components/Qwixx.jsx",
   output: {
     // filename: "public/bundle.js",
     filename: "bundle.js",

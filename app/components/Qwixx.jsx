@@ -1,12 +1,11 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var QwixxForm = require('./QwixxForm.jsx');
-var Scores = require('./Scores.jsx');
+import React from 'react'
+import ReactDOM from 'react-dom'
+import QwixxForm from './QwixxForm.jsx'
+import Scores from './Scores.jsx'
 
-var Qwixx = React.createClass({
-  
-	render: function() {
-		let scores = [34, 56, 67, 12];
+export default class Qwixx extends React.Component {
+	render() {
+		let scores = [34, 56, 67, 12]
 		return (
 			<div className="container panel panel-default">
 				<QwixxForm />
@@ -14,7 +13,7 @@ var Qwixx = React.createClass({
 			</div>
 		)
 	}
-});
+}
 
 ReactDOM.render(
   <Qwixx />,

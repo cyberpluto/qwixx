@@ -1,18 +1,16 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var ColorRow = require('./ColorRow.jsx');
+import React from 'react'
+import ReactDOM from 'react-dom'
+import ColorRow from './ColorRow.jsx'
 
-var QwixxForm = React.createClass({
-	render: function() {
+export default class QwixxForm extends React.Component {
+	render() {
 		return (
 			<div>
-			  <ColorRow color="red" />
-			  <ColorRow color="yellow" />
-			  <ColorRow color="green" />
-			  <ColorRow color="blue" />
+				<ColorRow color="red" />
+				<ColorRow color="yellow" />
+				<ColorRow color="green" />
+				<ColorRow color="blue" />
 			</div>
 		)
 	}
-});
-
-module.exports = QwixxForm;
+}

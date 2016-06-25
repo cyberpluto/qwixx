@@ -1,13 +1,10 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react'
 
-var ColorButton = React.createClass({
-	render: function() {
+export default class ColorButton extends React.Component {
+	render() {
 		var {colorClass, number} = this.props;
 		return (
 			<div className={`btn btn-${colorClass}`}>{number}</div>
 		)
 	}
-});
-
-module.exports = ColorButton;
+}

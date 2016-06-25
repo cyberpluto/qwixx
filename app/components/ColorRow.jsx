@@ -1,6 +1,5 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var ColorButton = require('./ColorButton.jsx');
+import React from 'react'
+import ColorButton from './ColorButton.jsx'
 
 export default class ColorRow extends React.Component {
     constructor(props) {
@@ -12,10 +11,10 @@ export default class ColorRow extends React.Component {
         this.handleClick = this.handleClick.bind(this)
     }
     handleClick() {
-        this.setState({
-            selected: this.state.push(i)
-        })
         console.log("ok")
+        // this.setState({
+        //     selected: this.state.push(i)
+        // })
     }
     render() {
 		let numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
@@ -47,7 +46,7 @@ export default class ColorRow extends React.Component {
                         colorClass={colorClass}
                         number={field}
                         key={i}
-                        onClick={this.handleClick}
+                        onClick={() => this.handleClick()}
                     />)            
                 })}
             </div>
