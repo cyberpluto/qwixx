@@ -8,7 +8,7 @@ export default class ColorRow extends React.Component {
             // selected: [5]
         }
 
-        this.handleClick = this.handleClick.bind(this)
+        // this.handleClick = this.handleClick.bind(this)
     }
     handleClick() {
         console.log("ok")
@@ -46,7 +46,6 @@ export default class ColorRow extends React.Component {
                         colorClass={colorClass}
                         number={field}
                         key={i}
-                        onClick={() => this.handleClick()}
                     />)            
                 })}
             </div>
