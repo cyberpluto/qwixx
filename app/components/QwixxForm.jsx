@@ -6,10 +6,10 @@ export default class QwixxForm extends React.Component {
 	render() {
 		return (
 			<div>
-				<ColorRow color="red" />
-				<ColorRow color="yellow" />
-				<ColorRow color="green" />
-				<ColorRow color="blue" />
+				<ColorRow color="red" {...this.props}/>
+				<ColorRow color="yellow" {...this.props}/>
+				<ColorRow color="green" {...this.props}/>
+				<ColorRow color="blue" {...this.props}/>
 			</div>
 		)
 	}

@@ -6,17 +6,15 @@ export default class ColorButton extends React.Component {
 			this.state = {
 					// selected: [5]
 			}
-
-			// this.handleClick = this.handleClick.bind(this)
 	}
-	// handleClick() {
-	// 		console.log("ok")
-	// }      
+
 	render() {
-		var {colorClass, number} = this.props
+		const {colorClass, number, onClick} = this.props
+		// console.log(selectField)
 		return (
 			<div 
 				className={`btn btn-${colorClass}`}
+				onClick={onClick}
 			>
 				{number}
 			</div>

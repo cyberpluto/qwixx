@@ -7,6 +7,7 @@ export default class ColorRow extends React.Component {
         this.state = {
             // selected: [5]
         }
+        // console.log(props)
 
         // this.handleClick = this.handleClick.bind(this)
     }
@@ -20,7 +21,8 @@ export default class ColorRow extends React.Component {
 		let numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         let colorClass
         let fields
-        switch(this.props.color) {
+        const {color, selectField} = this.props
+        switch(color) {
             case "red":
                 colorClass = "danger";
                 fields = numbers;
@@ -41,11 +43,12 @@ export default class ColorRow extends React.Component {
         return (
             <div className={`alert alert-${colorClass}`}>
                 {fields.map(function(field, i) {
-                    return (<ColorButton 
+                    return (<ColorButton
                         className={`btn ${colorClass}`}
                         colorClass={colorClass}
                         number={field}
                         key={i}
+                        onClick={selectField.bind(null, color, i)}
                     />)            
                 })}
             </div>

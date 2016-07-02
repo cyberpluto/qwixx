@@ -1,5 +1,6 @@
 module.exports = {
-  entry: "./app/components/Qwixx.jsx",
+  devtool: 'source-map',
+  entry: "./app/Qwixx.jsx",
   output: {
     // filename: "public/bundle.js",
     filename: "bundle.js",
@@ -12,7 +13,7 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel',
         query: {
-          presets: ['es2015', 'react']
+          presets: ['es2015', 'react', 'stage-2']
         }
       }
     ]

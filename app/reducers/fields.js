@@ -1,6 +1,14 @@
 function fields(state = [], action) {
-	console.log("kliknieto")
-	console.log(state, action)
-	return state
+	// let selectedFields = Object.assign({}, state)
+	switch(action.type) {
+		case 'SELECT_FIELD':
+			return {
+				...state,
+				[action.color]: state[action.color].concat(action.index) 
+			}
+		default:
+			return state
+	}
+
 }
 export default fields
