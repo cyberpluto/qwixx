@@ -20,35 +20,41 @@ export default class ColorRow extends React.Component {
     render() {
 		let numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         let colorClass
-        let fields
-        const {color, selectField} = this.props
+        let values
+        const {color, selectField, fields} = this.props
+				const row = fields[color]
+				// console.log(row)
         switch(color) {
             case "red":
                 colorClass = "danger";
-                fields = numbers;
+                values = numbers;
                 break;
             case "yellow":
                 colorClass = "warning";
-                fields = numbers;
+                values = numbers;
                 break;
             case "green":
                 colorClass = "success";
-                fields = numbers.reverse();
+                values = numbers.reverse();
                 break;
             case "blue":
                 colorClass = "info";
-                fields = numbers.reverse();
+                values = numbers.reverse();
                 break;    
         }
         return (
             <div className={`alert alert-${colorClass}`}>
-                {fields.map(function(field, i) {
+                {values.map(function(value, i) {
+										const selected = row.includes(i)
+										const disabled = (row.includes(i) || ( i < row[row.length - 1]))
+										console.log(disabled)
                     return (<ColorButton
-                        className={`btn ${colorClass}`}
                         colorClass={colorClass}
-                        number={field}
+                        number={value}
                         key={i}
                         onClick={selectField.bind(null, color, i)}
+												selected={selected}
+												disabled={disabled}
                     />)            
                 })}
             </div>
