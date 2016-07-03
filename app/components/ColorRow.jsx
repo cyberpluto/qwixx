@@ -47,16 +47,21 @@ export default class ColorRow extends React.Component {
                 {values.map(function(value, i) {
 										const selected = row.includes(i)
 										const disabled = (row.includes(i) || ( i < row[row.length - 1]))
-										console.log(disabled)
                     return (<ColorButton
                         colorClass={colorClass}
-                        number={value}
                         key={i}
                         onClick={selectField.bind(null, color, i)}
 												selected={selected}
 												disabled={disabled}
-                    />)            
+                    >{value}</ColorButton>
+										)            
                 })}
+								<ColorButton
+									colorClass={colorClass}
+									onClick={selectField.bind(null, color, 12)}
+								>
+									<i className="fa fa-lock"></i>
+								</ColorButton>
             </div>
         )
     }
