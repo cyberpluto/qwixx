@@ -18,51 +18,50 @@ export default class ColorRow extends React.Component {
         // })
     }
     render() {
-		let numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-        let colorClass
-        let values
-        const {color, selectField, fields} = this.props
-				const row = fields[color]
-				// console.log(row)
-        switch(color) {
-            case "red":
-                colorClass = "danger";
-                values = numbers;
-                break;
-            case "yellow":
-                colorClass = "warning";
-                values = numbers;
-                break;
-            case "green":
-                colorClass = "success";
-                values = numbers.reverse();
-                break;
-            case "blue":
-                colorClass = "info";
-                values = numbers.reverse();
-                break;    
-        }
-        return (
-            <div className={`alert alert-${colorClass}`}>
-                {values.map(function(value, i) {
-										const selected = row.includes(i)
-										const disabled = (row.includes(i) || ( i < row[row.length - 1]))
-                    return (<ColorButton
-                        colorClass={colorClass}
-                        key={i}
-                        onClick={selectField.bind(null, color, i)}
-												selected={selected}
-												disabled={disabled}
-                    >{value}</ColorButton>
-										)            
-                })}
-								<ColorButton
-									colorClass={colorClass}
-									onClick={selectField.bind(null, color, 12)}
-								>
-									<i className="fa fa-lock"></i>
-								</ColorButton>
-            </div>
-        )
+			const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+			let colorClass
+			let values
+			const {color, selectField, fields} = this.props
+			const row = fields[color]
+			const lock = <i className="fa fa-lock"></i>
+			// console.log(lock)
+			switch(color) {
+				case "red":
+					colorClass = "danger";
+					values = numbers.concat(lock);
+					break;
+				case "yellow":
+					colorClass = "warning";
+					values = numbers.concat(lock);
+					break;
+				case "green":
+					colorClass = "success";
+					values = numbers.reverse().concat(lock);
+					break;
+				case "blue":
+					colorClass = "info";
+					values = numbers.reverse().concat(lock);
+					break;    
+			}
+			return (
+				<div className={`alert alert-${colorClass}`}>
+					{values.map(function(value, i) {
+						const selected = row.includes(i)
+						const disabled = (row.includes(i) || ( i < row[row.length - 1]))
+						const options = {}
+						if (i < values.length - 1 || row.includes(numbers.length - 1)) {
+							options['onClick'] = selectField.bind(null, color, i)
+						}
+						return (<ColorButton
+							colorClass={colorClass}
+							key={i}
+							selected={selected}
+							disabled={disabled}
+							{...options}
+						>{value}</ColorButton>
+						)            
+					})}
+				</div>
+			)
     }
 }
