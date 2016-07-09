@@ -6,3 +6,10 @@ export function selectField(color, index) {
 		index,
 	}
 }
+
+// clearAll
+export function clearAll() {
+	return {
+		type: 'CLEAR_ALL',
+	}
+}

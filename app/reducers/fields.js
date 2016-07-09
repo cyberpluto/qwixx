@@ -6,6 +6,14 @@ function fields(state = [], action) {
 				...state,
 				[action.color]: state[action.color].concat(action.index) 
 			}
+		case 'CLEAR_ALL':
+			return {
+				...state,
+				red: [],
+				yellow: [],
+				green: [],
+				blue: [],
+			}
 		default:
 			return state
 	}

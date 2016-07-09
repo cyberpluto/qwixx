@@ -7,7 +7,7 @@ var Scores = React.createClass({
 			return number > 0 ? calcScore(number - 1) + number : 0
 		}
 		const colorClass = ['danger', 'warning', 'success', 'info'];
-		const {fields} = this.props;
+		const {fields, clearAll} = this.props;
 		const scores = [
 			calcScore(fields.red.length),
 			calcScore(fields.yellow.length),
@@ -24,9 +24,17 @@ var Scores = React.createClass({
 								<div className={`btn btn-${colorClass[i]}`} key={i}>{score}</div>
 							)
 						})}
+						<div className="btn btn-default">{totalScore}</div>
 					</div>
 					
-					<div className="btn btn-default pull-right">{totalScore}</div>
+					<div className="btn-group pull-right">
+						<div 
+							className="btn btn-default"
+							onClick={clearAll}
+						>
+							<i className="fa fa-eraser"></i> Clear
+						</div>
+					</div>
 				</div>
 			</div>
 		)
