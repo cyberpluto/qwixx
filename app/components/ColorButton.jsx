@@ -10,15 +10,11 @@ export default class ColorButton extends React.Component {
 
 	render() {
 		const {colorClass, children, selected, disabled, onClick} = this.props
-		// console.log(selected)
-		const options = {}
-		if (!selected && !disabled) {
-			options['onClick'] = onClick
-		}
+
 		return (
 			<div 
 				className={selected ? `btn btn-default disabled` : (disabled ? `btn btn-${colorClass} disabled` : `btn btn-${colorClass}`)}
-				{...options}
+				onClick={onClick}
 			>
 				{children}
 			</div>
