@@ -8,6 +8,11 @@ function fields(state = [], action) {
 				...state,
 				[action.color]: state[action.color].concat(action.index) 
 			}
+		case 'MISTHROW':
+			return {
+				...state,
+				misthrows: state.misthrows + 1
+			}
 		case 'CLEAR_ALL':
 			return {
 				...state,
@@ -15,6 +20,7 @@ function fields(state = [], action) {
 				yellow: [],
 				green: [],
 				blue: [],
+				misthrows: 0,
 			}
 		default:
 			return state

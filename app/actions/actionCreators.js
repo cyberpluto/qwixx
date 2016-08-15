@@ -7,6 +7,13 @@ export function selectField(color, index) {
 	}
 }
 
+// misthrow
+export function misthrow() {
+	return {
+		type: 'MISTHROW',
+	}
+}
+
 // clearAll
 export function clearAll() {
 	return {

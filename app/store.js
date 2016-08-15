@@ -13,7 +13,8 @@ const defaultState = {
 			red: [],
 			yellow: [],
 			green: [],
-			blue: []
+			blue: [],
+			misthrows: 0,
 		},
 		future: []
 	}

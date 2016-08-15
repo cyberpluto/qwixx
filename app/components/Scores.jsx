@@ -1,19 +1,21 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 import UndoRedo from './UndoRedo.jsx'
+import Misthrows from './Misthrows.jsx'
 
 var Scores = React.createClass({
 	render: function() {
 		function calcScore(number) {
 			return number > 0 ? calcScore(number - 1) + number : 0
 		}
-		const colorClass = ['danger', 'warning', 'success', 'info'];
-		const {fields, clearAll} = this.props;
+		const colorClass = ['danger', 'warning', 'success', 'info', 'default'];
+		const {fields, clearAll} = this.props
 		const scores = [
 			calcScore(fields.present.red.length),
 			calcScore(fields.present.yellow.length),
 			calcScore(fields.present.green.length),
-			calcScore(fields.present.blue.length)
+			calcScore(fields.present.blue.length),
+			fields.present.misthrows * -5,
 		]
 		const totalScore = scores.reduce((a, b) => a + b, 0);
 		return (
@@ -25,7 +27,7 @@ var Scores = React.createClass({
 								<div className={`btn btn-${colorClass[i]}`} key={i}>{score}</div>
 							)
 						})}
-						<div className="btn btn-default">{totalScore}</div>
+						<div className="btn btn-default"><strong>{totalScore}</strong></div>
 					</div>
 
 					<div className="btn-group pull-right">
@@ -37,8 +39,10 @@ var Scores = React.createClass({
 						</div>
 					</div>
 
-					<UndoRedo/>
-					
+					<Misthrows {...this.props}/>
+
+					<UndoRedo />
+
 				</div>
 			</div>
 		)
