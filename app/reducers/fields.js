@@ -1,3 +1,5 @@
+import undoable, { distinctState } from 'redux-undo'
+
 function fields(state = [], action) {
 	// let selectedFields = Object.assign({}, state)
 	switch(action.type) {
@@ -19,4 +21,9 @@ function fields(state = [], action) {
 	}
 
 }
-export default fields
+
+const undoableFields = undoable(fields, {
+	filter: distinctState()
+})
+
+export default undoableFields

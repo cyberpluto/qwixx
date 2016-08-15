@@ -1,4 +1,4 @@
-import {createStore, compose} from 'redux'
+import { createStore, compose } from 'redux'
 import { syncHistoryWithStore } from 'react-router-redux'
 import { browserHistory } from 'react-router'
 
@@ -8,10 +8,14 @@ import rootReducer from './reducers/index'
 // create an object for the default data
 const defaultState = {
 	fields: {
-		red: [],
-		yellow: [],
-		green: [],
-		blue: []
+		past: [],
+		present: {
+			red: [],
+			yellow: [],
+			green: [],
+			blue: []
+		},
+		future: []
 	}
 }
 

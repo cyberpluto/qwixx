@@ -22,7 +22,7 @@ export default class ColorRow extends React.Component {
 		let colorClass
 		let values
 		const {color, selectField, fields} = this.props
-		const row = fields[color]
+		const row = fields.present[color]
 		const lock = <i className="fa fa-lock"></i>
 		// console.log(lock)
 		switch(color) {
@@ -44,7 +44,7 @@ export default class ColorRow extends React.Component {
 				break;    
 		}
 		return (
-			<div className={`alert alert-${colorClass}`}>
+			<div className={`alert alert-${colorClass} text-center`}>
 				{values.map(function(value, i) {
 					const lastNumberId = numbers.length - 1
 					const lockId = values.length - 1
