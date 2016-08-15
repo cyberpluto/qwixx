@@ -1,11 +1,9 @@
 import React from 'react'
+import styles from './colorButton.scss'
 
 export default class ColorButton extends React.Component {
 	constructor(props) {
 			super(props)
-			this.state = {
-					// selected: [5]
-			}
 	}
 
 	render() {
@@ -13,7 +11,7 @@ export default class ColorButton extends React.Component {
 
 		return (
 			<div 
-				className={selected ? `btn btn-default disabled` : (disabled ? `btn btn-${colorClass} disabled` : `btn btn-${colorClass}`)}
+				className={selected ? `${styles.button} ${colorClass} disabled` : (disabled ? `${styles.button} ${colorClass} disabled` : `${styles.button} ${colorClass}`)}
 				onClick={onClick}
 			>
 				{children}

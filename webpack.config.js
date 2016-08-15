@@ -15,6 +15,14 @@ module.exports = {
         query: {
           presets: ['es2015', 'react', 'stage-2']
         }
+      },
+      {
+        test: /\.(css|scss)$/,
+        loaders: [
+            'style',
+            'css?sourceMap&modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+            'sass'
+        ]
       }
     ]
   }

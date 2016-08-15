@@ -1,0 +1,68 @@
+.colorRow {
+  margin: 2px 0;
+  padding: 3px 5px 3px 12px;
+  position: relative;
+  &:before {
+    $height: 10px;
+    $width: 20px;
+    position: absolute;
+    display: block;
+    content: "";
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    width: 0; 
+    height: 0; 
+    border-top: $height solid transparent;
+    border-bottom: $height solid transparent; 
+    border-left: $width solid #F1E6E4;
+    z-index: 100;
+  }
+  &:after {
+    $height: 8px;
+    $width: 17px;
+    position: absolute;
+    display: block;
+    content: "";
+    top: calc(50% - 1px);
+    transform: translateY(calc(-50% + 1px));    
+    left: -10px;
+    width: 0; 
+    height: 0; 
+    border-top: $height solid transparent;
+    border-bottom: $height solid transparent; 
+    border-left: $width solid #2b2b2b;
+    z-index: 100;
+  }
+}
+.red {
+  background-color: #C3010A;
+}
+.yellow {
+  background-color: #F9DD1A;
+}
+.green {
+  background-color: #039935;
+}
+.blue {
+  background-color: #01559B;
+}
+
+.buttonsWrapper {
+  display: inline-block;
+  padding: 1px;
+  border-radius: 0.5em;
+  $darken: 10%;
+  .red & {
+    background-color: darken(#C3010A, $darken)
+  }
+  .yellow & {
+    background-color: darken(#F9DD1A, $darken)
+  }
+  .green & {
+    background-color: darken(#039935, $darken)
+  }
+  .blue & {
+    background-color: darken(#01559B, $darken)
+  }
+}

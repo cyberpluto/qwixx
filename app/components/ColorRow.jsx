@@ -1,5 +1,6 @@
 import React from 'react'
 import ColorButton from './ColorButton.jsx'
+import styles from './colorRow.scss'
 
 export default class ColorRow extends React.Component {
     constructor(props) {
@@ -27,24 +28,25 @@ export default class ColorRow extends React.Component {
 		// console.log(lock)
 		switch(color) {
 			case "red":
-				colorClass = "danger";
+				colorClass = "red";
 				values = numbers.concat(lock);
 				break;
 			case "yellow":
-				colorClass = "warning";
+				colorClass = "yellow";
 				values = numbers.concat(lock);
 				break;
 			case "green":
-				colorClass = "success";
+				colorClass = "green";
 				values = numbers.reverse().concat(lock);
 				break;
 			case "blue":
-				colorClass = "info";
+				colorClass = "blue";
 				values = numbers.reverse().concat(lock);
 				break;    
 		}
 		return (
-			<div className={`alert alert-${colorClass} text-center`}>
+			<div className={`${styles[colorClass]} ${styles.colorRow}`}>
+				<div className={styles.buttonsWrapper}>
 				{values.map(function(value, i) {
 					const lastNumberId = numbers.length - 1
 					const lockId = values.length - 1
@@ -68,6 +70,7 @@ export default class ColorRow extends React.Component {
 					>{value}</ColorButton>
 					)            
 				})}
+				</div>
 			</div>
 		)
     }

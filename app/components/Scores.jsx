@@ -2,6 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 import UndoRedo from './UndoRedo.jsx'
 import Misthrows from './Misthrows.jsx'
+import styles from './scores.scss'
 
 var Scores = React.createClass({
 	render: function() {
@@ -19,7 +20,7 @@ var Scores = React.createClass({
 		]
 		const totalScore = scores.reduce((a, b) => a + b, 0);
 		return (
-			<div className="panel panel-default">
+			<div className={ styles.test}>
 				<div className="panel-body">
 					<div className="btn-group">
 						{scores.map(function(score, i) {
