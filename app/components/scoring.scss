@@ -1,0 +1,66 @@
+$borders: lighten(#000, 50%);
+
+.scoring {
+	margin: .2em 0;
+	vertical-align: middle;
+}
+.example {
+	display: inline-block;
+	margin: 0 7px 0 0;
+	text-align: center;
+	font-weight: bold;
+	vertical-align: middle;
+	.field {
+		position: relative;
+		display: inline-block;
+		border: 2px solid $borders;
+		border-radius: 0.4em;
+		background-color: #fff;
+		width: 2em;
+		height: 1.7em;
+		font-size: .8em;
+		&:after {
+			position: absolute;
+			content: "";
+			bottom: -.5em;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 1px;
+			width: 3.5em;
+			background-color: $borders;
+		}
+	}
+	.text {
+		font-size: .8em;
+		margin: .5em 0;
+		line-height: 1.2;
+	}
+}
+.point {
+	display: inline-block;
+	background-color: #fff;
+	border: 2px solid $borders;
+	border-radius: 0.4em;
+	margin: 0 2px;
+	min-width: 2.2em;
+	text-align: center;
+	font-weight: bold;
+	vertical-align: middle;
+}
+.crosses {
+	position: relative;
+	margin-top: .2em;
+	&:after {
+		position: absolute;
+		content: "";
+		bottom: -.2em;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80%;
+		height: 1px;
+		background-color: $borders;
+	}
+}
+.scores {
+	margin: .2em 0;
+}
