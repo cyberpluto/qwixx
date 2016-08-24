@@ -10,6 +10,16 @@
   font-size: 1.5em;
   font-family: 'Ropa Sans', sans-serif;
   font-weight: bold;
+  &:last-child {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #000;
+    right: -30px;
+    &:before {
+      background-color: #000;
+      border-radius: 50%;
+    }
+  }
 }
 
 :global .red {

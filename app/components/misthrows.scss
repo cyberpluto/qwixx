@@ -1,0 +1,30 @@
+$borders: lighten(#000, 50%);
+
+.misthrows {
+	display: inline-block;
+	text-align: center;
+	margin-left: .5em;
+}
+
+.info {
+	margin-bottom: 0.4em;
+}
+
+.fields {
+	display: flex;
+	flex-direction: row;
+}
+
+.misthrow {
+	display: inline-block;
+	background-color: #fff;
+	border: 2px solid $borders;
+	border-radius: 0.4em;
+	width: 2em;
+	height: 2.4em;
+	font-size: .8em;
+	margin: 0 2px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

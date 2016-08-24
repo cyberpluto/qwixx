@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './misthrows.scss'
 
 export default class Misthrows extends React.Component {
   constructor(props) {
@@ -17,7 +18,7 @@ export default class Misthrows extends React.Component {
       }
       misthrows.push(
         <div 
-          className="btn btn-default" 
+          className={styles.misthrow} 
           onClick={misthrow}
           key={i}
         >
@@ -26,8 +27,13 @@ export default class Misthrows extends React.Component {
       )
     }
     return (
-      <div>
-        {misthrows}
+      <div className={styles.misthrows}>
+        <div className={styles.info}>
+          <i className="fa fa-thumbs-down"></i> = -5
+        </div>
+        <div className={styles.fields}>
+          {misthrows}
+        </div>
       </div>
     )
   }

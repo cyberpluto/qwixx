@@ -40,8 +40,6 @@ var Scores = React.createClass({
 						</div>
 					</div>
 
-					<Misthrows {...this.props}/>
-
 					<UndoRedo />
 
 				</div>

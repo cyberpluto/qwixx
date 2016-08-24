@@ -11,7 +11,7 @@ export default class Main extends React.Component {
 		return (
 			<div className={styles.container}>
 				<QwixxForm {...this.props}/>
-				<Scoring />
+				<Scoring {...this.props}/>
 				<Scores {...this.props}/>
 			</div>
 		)
