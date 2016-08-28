@@ -1,19 +1,14 @@
 import React from 'react'
-
-// Import Components
 import QwixxForm from './QwixxForm.jsx'
 import Scoring from './Scoring.jsx'
 import Scores from './Scores.jsx'
 import styles from './main.scss'
 
-export default class Main extends React.Component {
-	render() {
-		return (
-			<div className={styles.container}>
-				<QwixxForm {...this.props}/>
-				<Scoring {...this.props}/>
-				<Scores {...this.props}/>
-			</div>
-		)
-	}
-}
+const Main = (props) => 
+	<div className={styles.container}>
+		<QwixxForm {...props}/>
+		<Scoring {...props}/>
+		<Scores {...props}/>
+	</div>
+
+export default Main

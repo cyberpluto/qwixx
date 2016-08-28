@@ -3,15 +3,13 @@ import ReactDOM from 'react-dom'
 import ColorRow from './ColorRow.jsx'
 import styles from './qwixxForm.scss'
 
-export default class QwixxForm extends React.Component {
-	render() {
-		return (
-			<div className={styles.fields}>
-				<ColorRow color="red" {...this.props}/>
-				<ColorRow color="yellow" {...this.props}/>
-				<ColorRow color="green" {...this.props}/>
-				<ColorRow color="blue" {...this.props}/>
-			</div>
-		)
-	}
-}
+const colors = ['red', 'yellow', 'green', 'blue']
+
+const QwixxForm = (props) => 
+	<div className={styles.fields}>
+		{colors.map((color) => 
+			<ColorRow color={color} key={color} {...props}/>
+		)}
+	</div>
+
+export default QwixxForm

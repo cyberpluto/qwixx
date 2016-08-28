@@ -8,16 +8,8 @@ export default class ColorRow extends React.Component {
         this.state = {
             // selected: [5]
         }
-        // console.log(props)
+    }
 
-        // this.handleClick = this.handleClick.bind(this)
-    }
-    handleClick() {
-        console.log("ok")
-        // this.setState({
-        //     selected: this.state.push(i)
-        // })
-    }
     render() {
 		const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 		let colorClass
