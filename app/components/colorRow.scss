@@ -49,7 +49,9 @@
 }
 
 .buttonsWrapper {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  position: relative;
   padding: 1px;
   border-radius: 0.5em;
   $darken: 10%;

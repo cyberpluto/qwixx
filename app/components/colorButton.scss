@@ -1,29 +1,49 @@
+@import "variables.scss";
+
 .button {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: rgba(255,255,255, .85);
-  margin: 1px .5px;
   width: 1.5em;
   height: 1.5em;
-  text-align: center;
   border-radius: .3em;
-  vertical-align: middle;
+  margin: 1px .5px;
   font-size: 1.5em;
   font-family: 'Ropa Sans', sans-serif;
   font-weight: bold;
   &:last-child {
     position: absolute;
     border-radius: 50%;
-    background-color: #000;
-    right: -30px;
-    &:before {
+    background: rgba(255,255,255, 1);
+    right: -35px;
+    i {
+      transform: rotate(10deg);
+    } 
+    &:after {
+      display: inline-block;
+      content: "";
       background-color: #000;
       border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      left: -5px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      border: 2px solid #000;
+      border-radius: 50%;
+      width: 1.5em;
+      height: 1.5em;
     }
   }
 }
 
 :global .red {
-  color: red;
+  color: $red;
 }
 :global .yellow {
   color: #F9DD1A;
