@@ -1,21 +1,24 @@
 import React from 'react'
+import classNames from 'classnames'
 import styles from './colorButton.scss'
 
-export default class ColorButton extends React.Component {
-	constructor(props) {
-			super(props)
-	}
-
-	render() {
-		const {colorClass, children, selected, disabled, onClick} = this.props
-
-		return (
-			<div 
-				className={selected ? `${styles.button} ${colorClass} disabled` : (disabled ? `${styles.button} ${colorClass} disabled` : `${styles.button} ${colorClass}`)}
-				onClick={onClick}
-			>
-				{children}
-			</div>
-		)
-	}
+ const ColorButton = (props) => {
+	const {color, children, selected, disabled, onClick} = props
+	
+	return (
+		<div 
+			className={classNames(
+				{[`${styles.disabled}`]: disabled},
+				{[`${styles.selected}`]: selected},
+				styles.button,
+				styles[color],
+			)}
+			onClick={onClick}
+			disabled
+		>
+			{children}
+		</div>
+	)
 }
+
+export default ColorButton

@@ -1,6 +1,8 @@
+@import "variables.scss";
+
 .colorRow {
   margin: 2px 0;
-  padding: 3px 5px 3px 12px;
+  padding: 3px 4.5em 3px 12px;
   position: relative;
   &:before {
     $height: 10px;
@@ -36,16 +38,16 @@
   }
 }
 .red {
-  background-color: #C3010A;
+  background-color: $red;
 }
 .yellow {
-  background-color: #F9DD1A;
+  background-color: $yellow;
 }
 .green {
-  background-color: #039935;
+  background-color: $green;
 }
 .blue {
-  background-color: #01559B;
+  background-color: $blue;
 }
 
 .buttonsWrapper {
@@ -54,17 +56,16 @@
   position: relative;
   padding: 1px;
   border-radius: 0.5em;
-  $darken: 10%;
   .red & {
-    background-color: darken(#C3010A, $darken)
+    background-color: $red-dark;
   }
   .yellow & {
-    background-color: darken(#F9DD1A, $darken)
+    background-color: $yellow-dark;
   }
   .green & {
-    background-color: darken(#039935, $darken)
+    background-color: $green-dark;
   }
   .blue & {
-    background-color: darken(#01559B, $darken)
+    background-color: $blue-dark;
   }
 }

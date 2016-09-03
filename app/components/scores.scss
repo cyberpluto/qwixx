@@ -1,4 +1,70 @@
-.test {
-  $color: red;
-  border: 1px solid $color;
+@import "variables.scss";
+
+.scores {
+  background-color: $gray-dark;
+  display: flex;
+  padding: .3em 10px 1em;
+}
+.text {
+  display: inline-block;
+  width: 4em;
+  font-size: .8em;
+  margin: .5em .9em .5em 0;
+  line-height: 1.2;
+  font-weight: bold;
+  text-align: center;
+}
+.box {
+  background: #fff;
+  border-radius: .4em;
+  border: 3px solid;
+  width: 3.1em;
+  height: 2.4em;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 1;
+    color: blue;
+    font-family: 'Shadows Into Light', cursive;
+  }
+}
+.score {
+  display: flex;
+  align-items: center;
+}
+.score .symbol {
+  display: inline-block;
+  color: $gray-darker;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 0 0.6em;
+
+}
+
+$colorNames: red, yellow, green, blue, gray;
+$colors: (
+  red: $red,
+  yellow: $yellow,
+  green: $green, 
+  blue: $blue,
+  gray: $gray-darker,
+);
+
+@each $color in $colorNames {
+  .scores .#{$color} {
+    border-color: map-get($colors, $color);
+  }
+}
+
+.totalScore {
+  display: inline-block;
+  border-color: black;
+  width: 8em;
 }

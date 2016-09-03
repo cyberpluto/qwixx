@@ -9,48 +9,95 @@
   height: 1.5em;
   border-radius: .3em;
   margin: 1px .5px;
-  font-size: 1.5em;
+  font-size: 2.1em;
   font-family: 'Ropa Sans', sans-serif;
   font-weight: bold;
+  cursor: pointer;
   &:last-child {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255,255,255, 1);
-    right: -35px;
+    right: -1.9em;
+    border: 2px solid;
     i {
-      transform: rotate(10deg);
+      transform: rotate(13deg);
+      transition: .33s;
     } 
     &:after {
       display: inline-block;
       content: "";
-      background-color: #000;
       border-radius: 50%;
-      width: 5px;
-      height: 5px;
+      width: .3em;
+      height: .3em;
       position: absolute;
-      left: -5px;
-    }
-    &:before {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      border: 2px solid #000;
-      border-radius: 50%;
-      width: 1.5em;
-      height: 1.5em;
+      left: -.43em;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }
 
-:global .red {
-  color: $red;
+$colorNames: red, yellow, green, blue;
+$colors: (
+  red: $red-dark,
+  yellow: $yellow-dark,
+  green: $green-dark, 
+  blue: $blue-dark,
+);
+@each $color in $colorNames {
+  .button.#{$color} {
+    color: map-get($colors, $color);
+    &:before {
+      border-color: map-get($colors, $color);
+    }
+    &:after {
+      background-color: map-get($colors, $color);
+    }
+  }
 }
-:global .yellow {
-  color: #F9DD1A;
+
+@keyframes cross {
+    from {width: 0;}
+    to {width: 1.5em;}
 }
-:global .green {
-  color: #039935;
-}
-:global .blue {
-  color: #01559B;
+
+.button {
+  position: relative;
+  
+  &.disabled,
+  &.selected {
+    cursor: not-allowed;
+        
+  }
+  &.disabled {
+    background: rgba(255,255,255, .5);
+  }
+  &.selected {
+    background: rgba(255,255,255, .6);
+    &:not(:last-child):before,
+    &:not(:last-child):after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      // width: 1.5em;
+      height: 3px;
+      border-radius: 50%;
+      background-color: darkblue;
+      animation: cross forwards;
+      animation-duration: .1s;
+    }
+    &:not(:last-child):before {
+      transform: rotate(45deg);
+      left: 0;
+      top: 50%;
+    }
+    &:not(:last-child):after {
+      transform: rotate(-45deg);
+      left: 0;
+      top: 50%;
+      animation-delay: .1s;
+    }
+    &:last-child i {
+      transform: rotate(0deg);
+    }
+  }
 }

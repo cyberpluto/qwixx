@@ -1,15 +1,17 @@
+$darken: 10%;
+
 $red: #C3010A;
-// $red-dark: ;
-// $red-light: ;
+$red-dark: darken($red, $darken);
 
 $yellow: #F9DD1A;
-// $yellow-dark: ;
-// $yellow-light: ;
+$yellow-dark: darken($yellow, $darken);
 
 $green: #039935;
-// $green-dark: ;
-// $green-light: ;
+$green-dark: darken($green, $darken);
 
 $blue: #01559B;
-// $blue-dark: ;
-// $blue-light: ;
+$blue-dark: darken($blue, $darken);
+
+$gray: darken(#fff, 15%);
+$gray-dark: darken($gray, 20%);
+$gray-darker: darken($gray, 40%);

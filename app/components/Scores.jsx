@@ -1,16 +1,20 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-import UndoRedo from './UndoRedo.jsx'
+import React from 'react'
+import classNames from 'classnames'
 import Misthrows from './Misthrows.jsx'
 import styles from './scores.scss'
 
-var Scores = React.createClass({
-	render: function() {
+const Scores = (props) => {
 		function calcScore(number) {
 			return number > 0 ? calcScore(number - 1) + number : 0
 		}
-		const colorClass = ['danger', 'warning', 'success', 'info', 'default'];
-		const {fields, clearAll} = this.props
+		const colors = [
+			{color: 'red', symbol: '+'}, 
+			{color: 'yellow', symbol: '+'}, 
+			{color: 'green', symbol: '+'}, 
+			{color: 'blue', symbol: '-'}, 
+			{color: 'gray', symbol: '='}
+		];
+		const {fields} = props
 		const scores = [
 			calcScore(fields.present.red.length),
 			calcScore(fields.present.yellow.length),
@@ -20,32 +24,38 @@ var Scores = React.createClass({
 		]
 		const totalScore = scores.reduce((a, b) => a + b, 0);
 		return (
-			<div className={ styles.test}>
-				<div className="panel-body">
-					<div className="btn-group">
-						{scores.map(function(score, i) {
-							return (
-								<div className={`btn btn-${colorClass[i]}`} key={i}>{score}</div>
-							)
-						})}
-						<div className="btn btn-default"><strong>{totalScore}</strong></div>
-					</div>
-
-					<div className="btn-group pull-right">
-						<div 
-							className="btn btn-default"
-							onClick={clearAll}
+			<div>
+				<div className={ styles.scores}>
+					<span className={styles.text}>Celkem Suma</span>
+					{scores.map(function(score, i) {
+						return (
+							<div className={styles.score}>
+								<div className={classNames(
+										styles[colors[i].color], 
+										styles.box,
+									)} 
+									key={i}
+								>
+									<span>{(score !== 0) && score}</span>
+								</div>
+								<div className={styles.symbol}>
+									{colors[i].symbol}
+								</div>
+							</div>
+						)
+					})}
+					<div className={styles.score}>
+						<div className={classNames(
+								styles.totalScore,
+								styles.box,
+							)}
 						>
-							<i className="fa fa-eraser"></i> Clear
+							<span>{(totalScore !== 0) && totalScore}</span>
 						</div>
 					</div>
-
-					<UndoRedo />
-
 				</div>
 			</div>
 		)
-	}
-});
+}
 
-module.exports = Scores;
+export default Scores

@@ -1,9 +1,29 @@
-$red: #C3010A;
+@import "variables.scss";
 
+
+@keyframes AnimationName { 
+    0%{background-position:90% 0%}
+    50%{background-position:11% 100%}
+    100%{background-position:90% 0%}
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  background: linear-gradient(45deg, $red, $yellow, $green,  $blue);
+  background-size: 800% 800%;
+  animation: AnimationName 180s ease infinite;
+}
 .container {
   display: inline-block;
-  padding: 10px;
+  margin: auto;
+}
+.qwixx {
+  display: inline-block;
   margin: 0 auto;
-  background-color: #F1E6E4;
-
+  overflow: hidden;
+  background-color: $gray;
+  border-radius: .4em;
+  box-shadow: -3px 3px 10px lighten(#000, 20%);
 }
