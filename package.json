@@ -1,14 +1,18 @@
 {
   "name": "Qwixx",
   "version": "1.0.0",
-  "main": "public/index.html",
+  "main": "index.html",
   "scripts": {
-    "start": "npm run serve | npm run dev",
+    "start-dev": "npm run serve",
     "serve": "./node_modules/.bin/http-server -p 8080",
-    "dev": "webpack-dev-server --progress --colors --port 8090"
+    "postinstall": "webpack -p",
+    "start": "node server.js"
   },
   "author": "Arkadiusz Zalewski",
   "license": "ISC",
+  "engines": {
+    "node": "6.4.0"
+  },
   "devDependencies": {
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
@@ -29,6 +33,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "express": "^4.14.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.5.1",
     "react-router-redux": "^4.0.5",

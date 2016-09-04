@@ -48,19 +48,20 @@
 
 }
 
-$colorNames: red, yellow, green, blue, gray;
-$colors: (
-  red: $red,
-  yellow: $yellow,
-  green: $green, 
-  blue: $blue,
-  gray: $gray-darker,
-);
-
-@each $color in $colorNames {
-  .scores .#{$color} {
-    border-color: map-get($colors, $color);
-  }
+.scores .red {
+  border-color: $red;
+}
+.scores .yellow {
+  border-color: $yellow;
+}
+.scores .green {
+  border-color: $green;
+}
+.scores .blue {
+  border-color: $blue;
+}
+.scores .gray {
+  border-color: $gray;
 }
 
 .totalScore {

@@ -2,9 +2,8 @@ module.exports = {
   devtool: 'source-map',
   entry: "./app/Qwixx.jsx",
   output: {
-    // filename: "public/bundle.js",
     filename: "bundle.js",
-    publicPath: 'http://localhost:8090/assets'
+    path: __dirname + "",
   },
   module: {
     loaders: [
@@ -14,7 +13,7 @@ module.exports = {
         loader: 'babel',
         query: {
           plugins: ['transform-decorators-legacy'],
-          presets: ['es2015', 'react', 'stage-2']
+          presets: ['react', 'es2015', 'stage-2']
         }
       },
       {

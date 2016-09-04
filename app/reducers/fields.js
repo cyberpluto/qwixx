@@ -11,7 +11,7 @@ function fields(state = [], action) {
 		case 'MISTHROW':
 			return {
 				...state,
-				misthrows: state.misthrows + 1
+				misthrows: state.misthrows < 4 ? state.misthrows + 1 : 4
 			}
 		case 'CLEAR_ALL':
 			return {

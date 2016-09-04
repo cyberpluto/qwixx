@@ -36,22 +36,40 @@
   }
 }
 
-$colorNames: red, yellow, green, blue;
-$colors: (
-  red: $red-dark,
-  yellow: $yellow-dark,
-  green: $green-dark, 
-  blue: $blue-dark,
-);
-@each $color in $colorNames {
-  .button.#{$color} {
-    color: map-get($colors, $color);
-    &:before {
-      border-color: map-get($colors, $color);
-    }
-    &:after {
-      background-color: map-get($colors, $color);
-    }
+.button.red {
+  color: $red-dark;
+  &:before {
+    border-color: $red-dark;
+  }
+  &:after {
+    background-color: $red-dark;
+  }
+}
+.button.yellow {
+  color: $yellow-dark;
+  &:before {
+    border-color: $yellow-dark;
+  }
+  &:after {
+    background-color: $yellow-dark;
+  }
+}
+.button.green {
+  color: $green-dark;
+  &:before {
+    border-color: $green-dark;
+  }
+  &:after {
+    background-color: $green-dark;
+  }
+}
+.button.blue {
+  color: $blue-dark;
+  &:before {
+    border-color: $blue-dark;
+  }
+  &:after {
+    background-color: $blue-dark;
   }
 }
 
