@@ -11,7 +11,7 @@ const Scoring = (props) =>
 		<div className={styles.example}>
 			<div className={styles.field}>X</div>
 			<div className={styles.text}>
-				Body<br/> Punkty
+				Points
 			</div>
 		</div>
 		{points.map((point, i) => { return (

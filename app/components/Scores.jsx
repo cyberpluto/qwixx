@@ -26,7 +26,7 @@ const Scores = (props) => {
 		return (
 			<div>
 				<div className={ styles.scores}>
-					<span className={styles.text}>Celkem Suma</span>
+					<span className={styles.text}>Totals</span>
 					{scores.map(function(score, i) {
 						return (
 							<div className={styles.score}>
