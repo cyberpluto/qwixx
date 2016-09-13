@@ -14,7 +14,7 @@ export default class Misthrows extends React.Component {
     for ( let i = 0; i < 4; i++ ) {
       let content = "\xa0"
       if (i+1 <= fields.present.misthrows) {
-        content = <i className="fa fa-times"></i>
+        content = 'X'
       }
       misthrows.push(
         <div 
@@ -22,7 +22,7 @@ export default class Misthrows extends React.Component {
           onClick={misthrow}
           key={i}
         >
-          {content}
+          <span className={styles.x}>{content}</span>
         </div>
       )
     }

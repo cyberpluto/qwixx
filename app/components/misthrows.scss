@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 $borders: lighten(#000, 50%);
 
 .misthrows {
@@ -20,11 +22,18 @@ $borders: lighten(#000, 50%);
 	background-color: #fff;
 	border: 2px solid $borders;
 	border-radius: 0.4em;
-	width: 2em;
-	height: 2.4em;
-	font-size: .8em;
+	width: 1.7em;
+	height: 2em;
 	margin: 0 2px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.x {
+	position: absolute;
+	color: $pen;
+	font-size: 2em;
+	font-family: 'Shadows Into Light', cursive;
+	font-weight: bold;
 }
