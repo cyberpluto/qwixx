@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
-    "start-dev": "npm run serve",
+    "start-dev": "webpack-dev-server --inline",
     "serve": "./node_modules/.bin/http-server -p 8080",
     "postinstall": "webpack -p",
     "start": "node server.js"
@@ -25,6 +25,7 @@
     "node-sass": "^3.8.0",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
+    "react-hot-loader": "^3.0.0-beta.3",
     "resolve-url-loader": "^1.6.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
