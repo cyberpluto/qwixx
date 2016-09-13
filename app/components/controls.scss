@@ -15,7 +15,7 @@
 	color: #fff;
 	margin: 0 1em;
 	padding: .2em;
-	box-shadow: -3px 3px 10px lighten(#000, 20%);
+	box-shadow: $shadow;
 }
 
 .undo {

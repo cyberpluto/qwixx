@@ -17,7 +17,7 @@
     height: 0; 
     border-top: $height solid transparent;
     border-bottom: $height solid transparent; 
-    border-left: $width solid #F1E6E4;
+    border-left: $width solid $gray;
     z-index: 100;
   }
   &:after {

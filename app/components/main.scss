@@ -7,13 +7,13 @@
     100%{background-position:90% 0%}
 }
 .main {
-  $color1: #ffe900;
-  $color2: #ffaa00;
+  $colorOuter: #010e13;
+  $colorIner: #2bb3f3;
   display: flex;
   flex-direction: column;
   height: 100vh;
   align-items: center;
-  background: radial-gradient($color1, $color2)
+  background: radial-gradient($colorIner, $colorOuter)
 }
 .container {
   display: inline-block;
@@ -25,5 +25,5 @@
   overflow: hidden;
   background-color: $gray;
   border-radius: .4em;
-  box-shadow: 0px 3px 20px lighten(#000, 40%);
+  box-shadow: $shadow;
 }
