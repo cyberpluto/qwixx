@@ -4,15 +4,15 @@
   background-color: $gray-dark;
   display: flex;
   padding: .3em 10px 1em;
+  text-align: center;
+  align-items: center;
 }
 .text {
   display: inline-block;
   width: 4em;
   font-size: .8em;
-  margin: .5em .9em .5em 0;
-  line-height: 1.2;
+  margin: 0 .9em 0 0;
   font-weight: bold;
-  text-align: center;
 }
 .box {
   background: #fff;
