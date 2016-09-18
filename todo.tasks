@@ -3,6 +3,7 @@ Qwixx:
 ✔ change trigons border color to match background @done
 ✔ lighten shadow under undo buttons @done
 ✔ use english version of form @done
+✔ pointer cursor on control buttons @done
 ☐ improve crossing numbers effect
 ☐ switch lock icon when row is done
 ☐ optimise build version
