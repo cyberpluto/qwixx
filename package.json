@@ -5,7 +5,7 @@
   "scripts": {
     "start-dev": "webpack-dev-server --inline",
     "serve": "./node_modules/.bin/http-server -p 8080",
-    "postinstall": "webpack",
+    "postinstall": "webpack --config webpack.prod.config.js -p ",
     "start": "node server.js"
   },
   "author": "Arkadiusz Zalewski",
