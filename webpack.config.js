@@ -1,4 +1,5 @@
 const webpack = require("webpack")
+var autoprefixer = require('autoprefixer')
 
 module.exports = {
   devtool: 'source-map',
@@ -26,12 +27,13 @@ module.exports = {
         test: /\.(css|scss)$/,
         loaders: [
           'style',
-          'css?sourceMap&modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+          'css?sourceMap&modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!postcss-loader',
           'sass'
         ]
       }
     ]
   },
+  postcss: [autoprefixer],
   plugins: [
     new webpack.HotModuleReplacementPlugin()
   ]

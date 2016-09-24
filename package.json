@@ -5,7 +5,7 @@
   "scripts": {
     "start-dev": "webpack-dev-server --inline",
     "serve": "./node_modules/.bin/http-server -p 8080",
-    "postinstall": "webpack --config webpack.prod.config.js -p ",
+    "postinstall": "webpack --config webpack.prod.config.js -p",
     "start": "node server.js"
   },
   "author": "Arkadiusz Zalewski",
@@ -14,6 +14,7 @@
     "node": "6.4.0"
   },
   "devDependencies": {
+    "autoprefixer": "^6.4.1",
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
@@ -23,6 +24,7 @@
     "css-loader": "^0.23.1",
     "http-server": "^0.9.0",
     "node-sass": "^3.8.0",
+    "postcss-loader": "^0.13.0",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
     "react-hot-loader": "^3.0.0-beta.3",
