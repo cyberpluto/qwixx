@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
-    "start-dev": "webpack-dev-server --inline",
+    "start-dev": "webpack-dev-server --inline --content-base build/",
     "serve": "./node_modules/.bin/http-server -p 8080",
     "postinstall": "webpack -p",
     "start": "node server.js"
