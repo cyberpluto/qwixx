@@ -29,12 +29,11 @@ const Scores = (props) => {
 					<span className={styles.text}>Totals</span>
 					{scores.map(function(score, i) {
 						return (
-							<div className={styles.score}>
+							<div className={styles.score} key={i}>
 								<div className={classNames(
 										styles[colors[i].color], 
 										styles.box,
 									)} 
-									key={i}
 								>
 									<span>{(score !== 0) && score}</span>
 								</div>

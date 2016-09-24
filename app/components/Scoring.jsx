@@ -15,7 +15,7 @@ const Scoring = (props) =>
 			</div>
 		</div>
 		{points.map((point, i) => { return (
-			<div className={styles.point}>
+			<div className={styles.point} key={i}>
 				<div className={styles.crosses}>
 					{point[0]}x
 				</div>
