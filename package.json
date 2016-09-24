@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
-    "start-dev": "webpack-dev-server --inline --content-base build/",
+    "start-dev": "webpack-dev-server --inline",
     "serve": "./node_modules/.bin/http-server -p 8080",
-    "postinstall": "webpack -p",
+    "postinstall": "webpack",
     "start": "node server.js"
   },
   "author": "Arkadiusz Zalewski",
