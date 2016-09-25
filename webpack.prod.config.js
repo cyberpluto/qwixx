@@ -15,7 +15,6 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loaders: ['react-hot', 'babel'],
         loaders: [
-          // 'react-hot', 
           'babel?presets[]=es2015,presets[]=stage-2,presets[]=react,plugins[]=transform-decorators-legacy,plugins[]=react-hot-loader/babel'
         ]
       },
@@ -31,6 +30,11 @@ module.exports = {
   },
   postcss: [autoprefixer],
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env':{
+        'NODE_ENV': JSON.stringify('production'),
+      }
+    }),
   ]
 };
