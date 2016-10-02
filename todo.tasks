@@ -5,8 +5,7 @@ Qwixx:
 ✔ use english version of form @done
 ✔ pointer cursor on control buttons @done
 ✔ optimise build version @done
+✔ delete bootstrap from project @done
 ☐ improve crossing numbers effect
-☐ switch lock icon when row is done
 ☐ should work on mobile
-☐ delete bootstrap from project
 ☐ add favicon
