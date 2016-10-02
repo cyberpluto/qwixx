@@ -1,5 +1,6 @@
 const webpack = require("webpack")
 var autoprefixer = require('autoprefixer')
+const atImport = require('postcss-import')
 
 module.exports = {
   devtool: 'source-map',
@@ -28,7 +29,7 @@ module.exports = {
       }
     ]
   },
-  postcss: [autoprefixer],
+  postcss: [autoprefixer, atImport],
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({

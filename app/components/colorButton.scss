@@ -5,33 +5,39 @@
   justify-content: center;
   align-items: center;
   background: rgba(255,255,255, .85);
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.45em;
+  height: 1.45em;
   border-radius: .3em;
-  margin: 1px .5px;
+  margin: .02em;
   font-size: 2.1em;
   font-family: 'Ropa Sans', sans-serif;
   font-weight: bold;
   cursor: pointer;
+  $dot-width: .2em;
   &:last-child {
     position: absolute;
+    width: 1.2em;
+    height: 1.2em;
     border-radius: 50%;
-    right: -1.9em;
-    border: 2px solid;
+    right: 0;
+    top: 50%;
+    transform: translate(calc(100% + #{$dot-width}), -50%);
+    border: .07em solid;
     i {
+      font-size: .7em;
       transform: rotate(13deg);
       transition: .33s;
     } 
     &:after {
+      position: absolute;
       display: inline-block;
       content: "";
       border-radius: 50%;
-      width: .3em;
-      height: .3em;
-      position: absolute;
-      left: -.43em;
+      width: $dot-width;
+      height: $dot-width;
+      left: 0;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translate(calc(-100% - .07em), -50%);
     }
   }
 }

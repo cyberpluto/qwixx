@@ -24,6 +24,7 @@
     "css-loader": "^0.23.1",
     "http-server": "^0.9.0",
     "node-sass": "^3.8.0",
+    "postcss-import": "^8.1.2",
     "postcss-loader": "^0.13.0",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
@@ -41,6 +42,7 @@
     "react-router": "^2.5.1",
     "react-router-redux": "^4.0.5",
     "redux": "^3.5.2",
-    "redux-undo": "^0.6.1"
+    "redux-undo": "^0.6.1",
+    "reset-css": "^2.2.0"
   }
 }

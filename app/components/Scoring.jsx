@@ -9,7 +9,7 @@ const points = [
 const Scoring = (props) => 
   <div className={styles.scoring}>
 		<div className={styles.example}>
-			<div className={styles.field}>X</div>
+			<div className={styles.field}>X</div><br/>
 			<div className={styles.text}>
 				Points
 			</div>

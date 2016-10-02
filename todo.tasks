@@ -4,7 +4,9 @@ Qwixx:
 ✔ lighten shadow under undo buttons @done
 ✔ use english version of form @done
 ✔ pointer cursor on control buttons @done
+✔ optimise build version @done
 ☐ improve crossing numbers effect
 ☐ switch lock icon when row is done
-☐ optimise build version
 ☐ should work on mobile
+☐ delete bootstrap from project
+☐ add favicon

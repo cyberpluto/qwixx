@@ -1,3 +1,4 @@
+@import 'reset-css/reset.css';
 @import "variables.scss";
 
 @keyframes AnimationName { 
@@ -13,6 +14,7 @@
   height: 100vh;
   align-items: center;
   background: radial-gradient($colorIner, $colorOuter);
+  font-family: 'Ropa Sans', sans-serif;
 }
 .container {
   display: inline-block;

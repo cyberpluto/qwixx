@@ -3,9 +3,9 @@
 .scores {
   background-color: $gray-dark;
   display: flex;
-  padding: .3em 10px 1em;
-  text-align: center;
+  padding: .5em 1em 1em;
   align-items: center;
+  align-content: justify
 }
 .text {
   display: inline-block;
@@ -13,13 +13,14 @@
   font-size: .8em;
   margin: 0 .9em 0 0;
   font-weight: bold;
+  text-align: left;
 }
 .box {
   background: #fff;
   border-radius: .4em;
   border: 3px solid;
-  width: 3.1em;
-  height: 2.4em;
+  width: 2.7em;
+  height: 2.1em;
   text-align: center;
   display: inline-block;
   position: relative;
@@ -44,7 +45,7 @@
   color: $gray-darker;
   font-weight: bold;
   font-size: 1.5em;
-  margin: 0 0.6em;
+  margin: 0 0.45em;
 
 }
 

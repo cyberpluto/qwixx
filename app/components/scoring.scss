@@ -1,25 +1,31 @@
 $borders: lighten(#000, 50%);
 
 .scoring {
-	padding: 0 10px;
-	margin: .2em 0;
+	margin: .1em 1em .4em;
 	display: flex;
-	align-items: center;
+	align-content: justify;
 }
 .example {
-	display: inline-block;
-	text-align: center;
 	font-weight: bold;
 	margin-right: .5em;
+	text-align: center;
+	vertical-align: middle;
 	.field {
-		position: relative;
 		display: inline-block;
+		position: relative;
 		border: 2px solid $borders;
 		border-radius: 0.4em;
 		background-color: #fff;
-		width: 2em;
-		height: 1.7em;
+		width: 1.4em;
+		height: 1.4em;
 		font-size: .8em;
+		vertical-align: middle;
+		&:before {
+			content: "";
+			height: 100%;
+			display: inline-block;
+			vertical-align: middle;
+		}
 		&:after {
 			position: absolute;
 			content: "";
@@ -27,11 +33,12 @@ $borders: lighten(#000, 50%);
 			left: 50%;
 			transform: translateX(-50%);
 			height: 1px;
-			width: 3.5em;
+			width: 3em;
 			background-color: $borders;
 		}
 	}
 	.text {
+		display: inline-block;
 		font-size: .8em;
 		margin: .5em 0;
 		line-height: 1.2;
@@ -42,15 +49,15 @@ $borders: lighten(#000, 50%);
 	background-color: #fff;
 	border: 2px solid $borders;
 	border-radius: 0.4em;
-	margin: 0 2px;
-	min-width: 2.2em;
+	margin: 0 .15em;
+	width: 1.8em;
 	text-align: center;
 	font-weight: bold;
 }
 
 .crosses {
 	position: relative;
-	margin-top: .2em;
+	margin-top: .3em;
 	&:after {
 		position: absolute;
 		content: "";
@@ -63,5 +70,5 @@ $borders: lighten(#000, 50%);
 	}
 }
 .scores {
-	margin: .2em 0;
+	margin: .5em 0 .2em;
 }
