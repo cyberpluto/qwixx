@@ -1,19 +1,17 @@
 import React from 'react'
-import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import { Router, Route, IndexRoute } from 'react-router'
+import {render} from 'react-dom'
+import {Provider} from 'react-redux'
+require('file-loader?name=[name].[ext]!../index.html')
 
 // Import Components
 import App from './components/App.jsx'
 
 // Store
-import store, {history} from './store'
+import store from './store'
 
 render(
 	<Provider store={store}>
-		<Router history={history}>
-			<Route path="/" component={App}/>
-		</Router>
+		<App />
 	</Provider>,
 	document.getElementById('root')
 )
