@@ -1,7 +1,8 @@
 import React from 'react'
-import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import { Router, Route, IndexRoute } from 'react-router'
+import {render} from 'react-dom'
+import {Provider} from 'react-redux'
+import {Router, Route, IndexRoute} from 'react-router'
+require('file-loader?name=[name].[ext]!../index.html')
 
 // Import Components
 import App from './components/App.jsx'
@@ -12,7 +13,7 @@ import store, {history} from './store'
 render(
 	<Provider store={store}>
 		<Router history={history}>
-			<Route path="/" component={App}/>
+			<Route path="/" component={App} />
 		</Router>
 	</Provider>,
 	document.getElementById('root')
