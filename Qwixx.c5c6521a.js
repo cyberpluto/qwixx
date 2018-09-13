@@ -132,4 +132,4 @@ module.exports={AnimationName:"main_AnimationName_2z0Pw",container:"main_contain
 },{"redux":"9WZ3","./reducers/index":"a1O8"}],"PVJt":[function(require,module,exports) {
 "use strict";var e=require("react"),r=o(e),t=require("react-dom"),u=require("react-redux"),a=require("./components/App.jsx"),d=o(a),l=require("./store"),n=o(l);function o(e){return e&&e.__esModule?e:{default:e}}require("file-loader?name=[name].[ext]!../index.html"),(0,t.render)(r.default.createElement(u.Provider,{store:n.default},r.default.createElement(d.default,null)),document.getElementById("root"));
 },{"react":"HdMw","react-dom":"X9zx","react-redux":"sYSi","file-loader?name=[name].[ext]!../index.html":"U6Go","./components/App.jsx":"+/gQ","./store":"+gJK"}]},{},["PVJt"], null)
-//# sourceMappingURL=/Qwixx.d6a4b938.map
+//# sourceMappingURL=/qwixx/Qwixx.d6a4b938.map
